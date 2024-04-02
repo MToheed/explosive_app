@@ -1,4 +1,4 @@
-import 'package:explosive_app/ui/constants/app_colors.dart';
+import 'package:explosive_app/ui/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
