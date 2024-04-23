@@ -19,11 +19,39 @@ class AppTextStyles {
     fontSize: 50,
   );
 
+  static const TextStyle bold48 = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+    fontSize: 48,
+  );
+
+  static const TextStyle bold32 = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+    fontSize: 32,
+  );
+
+  static const TextStyle bold36 = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+    fontSize: 36,
+  );
+
   static const TextStyle bold40 = TextStyle(
     fontFamily: 'ManifaPro2',
     fontWeight: FontWeight.bold,
     color: AppColors.dark02,
     fontSize: 40,
+  );
+
+  static const TextStyle bold48Purple = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.bold,
+    color: AppColors.purple,
+    fontSize: 48,
   );
 
   static const TextStyle bold24 = TextStyle(
@@ -37,6 +65,20 @@ class AppTextStyles {
     fontFamily: 'ManifaPro2',
     fontWeight: FontWeight.bold,
     color: AppColors.dark02,
+    fontSize: 24,
+  );
+
+  static const TextStyle bold24Dark03 = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.bold,
+    color: AppColors.dark03,
+    fontSize: 24,
+  );
+
+  static const TextStyle bold24Grey02 = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.bold,
+    color: AppColors.grey02,
     fontSize: 24,
   );
 
@@ -63,6 +105,13 @@ class AppTextStyles {
     fontFamily: 'ManifaPro2',
     fontWeight: FontWeight.w600,
     color: AppColors.grey02,
+    fontSize: 24,
+  );
+
+  static const TextStyle semiBold24White = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.w600,
+    color: AppColors.white,
     fontSize: 24,
   );
 

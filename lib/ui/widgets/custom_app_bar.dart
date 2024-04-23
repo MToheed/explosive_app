@@ -14,9 +14,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         style: AppTextStyles.bold40,
       ),
       toolbarHeight: 120,
+      backgroundColor: AppColors.white,
+      leading: Builder(
+        builder: (context) {
+          return GestureDetector(
+            onTap: () => Scaffold.of(context).openDrawer(),
+            child: const AppSvgPicture(path: "assets/icons/hamburger.svg"),
+          );
+        },
+      ),
       actions: const [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 25.0),
+          padding: EdgeInsets.only(right: 35.0),
           child: badges.Badge(
             badgeContent: Text(
               "5",

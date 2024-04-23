@@ -8,3 +8,5 @@ export 'text_fields/date_text_field.dart';
 export 'cards/search_date_card.dart';
 export 'app_svg_picture.dart';
 export 'custom_app_bar.dart';
+export 'cards/previous_requests_card.dart';
+export 'nav_drawer/app_nav_drawer.dart';
