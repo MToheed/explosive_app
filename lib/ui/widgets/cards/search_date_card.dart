@@ -1,5 +1,4 @@
 import 'package:explosive_app/ui/constants/constants.dart';
-import 'package:explosive_app/ui/screens/previous_requests/new_request.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -30,20 +29,25 @@ class SearchDateCard extends StatelessWidget {
                 end: Alignment.bottomCenter,
               ),
             ),
-            child: const Center(
+            child: Center(
               child: Row(
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 25.0),
                     child: SearchTextField(),
                   ),
-                  DateTextField(),
+                  const DateTextField(),
                   Expanded(
                     child: Align(
                       alignment: Alignment.centerRight,
                       child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 25.0),
-                        child: NewRequest(),
+                        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                        child: RequestButton(
+                          title: "New",
+                          iconUrl: "assets/icons/add.svg",
+                          onPressed: () {},
+                        ),
+                        // child: NewRequest(),
                       ),
                     ),
                   ),

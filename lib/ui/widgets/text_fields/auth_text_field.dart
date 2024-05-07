@@ -1,5 +1,5 @@
 import 'package:explosive_app/ui/constants/app_colors.dart';
-import 'package:explosive_app/ui/widgets/app_text_styles.dart';
+import 'package:explosive_app/ui/widgets/texts/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class AuthTextField extends StatelessWidget {

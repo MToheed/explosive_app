@@ -33,6 +33,13 @@ class AppTextStyles {
     fontSize: 32,
   );
 
+  static const TextStyle bold32Dark02 = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.bold,
+    color: AppColors.dark02,
+    fontSize: 32,
+  );
+
   static const TextStyle bold36 = TextStyle(
     fontFamily: 'ManifaPro2',
     fontWeight: FontWeight.bold,
@@ -53,6 +60,14 @@ class AppTextStyles {
     color: AppColors.purple,
     fontSize: 48,
   );
+
+  static const TextStyle bold32Purple = TextStyle(
+    fontFamily: 'ManifaPro2',
+    fontWeight: FontWeight.bold,
+    color: AppColors.purple,
+    fontSize: 32,
+  );
+
 
   static const TextStyle bold24 = TextStyle(
     fontFamily: 'ManifaPro2',
@@ -162,4 +177,24 @@ class AppTextStyles {
     color: AppColors.darkGreen,
     fontSize: 30,
   );
+
+  static TextStyle bold(double kFontSize, Color kColor) {
+    return TextStyle(
+      fontFamily: 'ManifaPro2',
+      fontWeight: FontWeight.bold,
+      fontSize: kFontSize,
+      color: kColor,
+    );
+  }
+
+  static TextStyle semiBold(double kFontSize, Color kColor) {
+    return TextStyle(
+      fontFamily: 'ManifaPro2',
+      fontWeight: FontWeight.w600,
+      fontSize: kFontSize,
+      color: kColor,
+    );
+  }
+
+
 }

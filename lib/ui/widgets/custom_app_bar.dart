@@ -4,25 +4,32 @@ import 'package:flutter/material.dart';
 import '../constants/constants.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar({super.key, required this.title, required this.isDrawer});
+
+  final String title;
+  final bool isDrawer;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(
-        'Requests',
+      title: Text(
+        title,
         style: AppTextStyles.bold40,
       ),
       toolbarHeight: 120,
       backgroundColor: AppColors.white,
-      leading: Builder(
-        builder: (context) {
-          return GestureDetector(
-            onTap: () => Scaffold.of(context).openDrawer(),
-            child: const AppSvgPicture(path: "assets/icons/hamburger.svg"),
-          );
-        },
-      ),
+      leading: isDrawer
+          ? GestureDetector(
+              onTap: () => Scaffold.of(context).openDrawer(),
+              child: const AppSvgPicture(path: "assets/icons/hamburger.svg"),
+            )
+          : GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: const Icon(
+                Icons.arrow_back_ios_new,
+                size: 60,
+              ),
+            ),
       actions: const [
         Padding(
           padding: EdgeInsets.only(right: 35.0),

@@ -1,5 +1,5 @@
 import 'package:explosive_app/ui/constants/app_colors.dart';
-import 'package:explosive_app/ui/widgets/app_text_styles.dart';
+import 'package:explosive_app/ui/widgets/texts/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class AuthButton extends StatelessWidget {
@@ -14,6 +14,7 @@ class AuthButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         minimumSize: const Size(double.infinity, 64),
+        maximumSize: const Size(double.infinity, 64),
         backgroundColor: AppColors.darkGreen,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),

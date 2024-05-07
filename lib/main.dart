@@ -1,5 +1,7 @@
+import 'package:explosive_app/ui/screens/add_request/add_request_screen.dart';
 import 'package:explosive_app/ui/screens/otp/otp_screen.dart';
 import 'package:explosive_app/ui/screens/previous_requests/previous_requests_screen.dart';
+import 'package:explosive_app/ui/screens/request_summary/request_summary_screen.dart';
 import 'package:explosive_app/ui/screens/signIn/sign_in_screen.dart';
 import 'package:explosive_app/ui/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,12 +17,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Explosive App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  const PreviousRequestsScreen(),
+      home: const RequestSummaryScreen(),
     );
   }
 }
