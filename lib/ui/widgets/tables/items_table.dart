@@ -1,5 +1,6 @@
 import 'package:explosive_app/ui/constants/constants.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ItemsTable extends StatelessWidget {
@@ -53,13 +54,29 @@ class ItemsTable extends StatelessWidget {
                     const AppDataRow(text: "50"),
                     const AppDataRow(text: "9"),
                     if (!isSummary)
-                      const SizedBox(
+                      SizedBox(
                         height: 64,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            AppSvgPicture(path: "assets/icons/edit_dark.svg"),
-                            AppSvgPicture(path: "assets/icons/delete.svg")
+                            const AppSvgPicture(
+                              path: "assets/icons/edit_dark.svg",
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                // showDialog(
+                                //   context: context,
+                                //   builder: (_) {
+                                //     return const Dialog(
+                                //       child: AppDialog(),
+                                //     );
+                                //   },
+                                // );
+                              },
+                              child: const AppSvgPicture(
+                                path: "assets/icons/delete.svg",
+                              ),
+                            ),
                           ],
                         ),
                       ),

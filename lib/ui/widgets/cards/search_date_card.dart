@@ -36,7 +36,11 @@ class SearchDateCard extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 25.0),
                     child: SearchTextField(),
                   ),
-                  const DateTextField(),
+                  AppDateCalendar(
+                    kHeight: 60,
+                    kWidth: 220,
+                    kFirstDate: DateTime(2000),
+                  ),
                   Expanded(
                     child: Align(
                       alignment: Alignment.centerRight,

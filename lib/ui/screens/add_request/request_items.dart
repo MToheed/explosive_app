@@ -1,4 +1,5 @@
 import 'package:explosive_app/ui/constants/constants.dart';
+import 'add_request.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -30,9 +31,14 @@ class RequestItems extends StatelessWidget {
                     title: "Gun Size *",
                     hintText: "i.e 3-1/8\"OD",
                   ),
-                  RequestTextField(
-                    title: "HSD Type *",
-                    hintText: "i.e HSD",
+                  GunTypeDropDown(
+                    title: "Gun Type *",
+                    items: [
+                      "Gun Type 1",
+                      "Gun Type 2",
+                      "Gun Type 3",
+                      "Gun Type 4",
+                    ],
                   ),
                 ],
               ),

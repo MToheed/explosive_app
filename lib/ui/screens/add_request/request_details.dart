@@ -1,4 +1,5 @@
 import 'package:explosive_app/ui/constants/constants.dart';
+import 'add_request.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -17,27 +18,42 @@ class RequestDetails extends StatelessWidget {
             color: AppColors.white,
             borderRadius: BorderRadius.circular(6),
           ),
-          child: const Column(
+          child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  RequestTextField(
-                    title: "Explosive Required Date *",
-                    hintText: "i.e 26/02/2024",
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Explosive Required Date *",
+                        style: AppTextStyles.bold(24, AppColors.dark02),
+                      ),
+                      const SizedBox(height: 10),
+                      AppDateCalendar(
+                        kHeight: 64,
+                        kWidth: 270,
+                        kFirstDate: DateTime.now(),
+                      ),
+                    ],
                   ),
-                  RequestTextField(
+                  const RequestFromDropDown(
                     title: "Request From *",
-                    hintText: "i.e JRAK Well Completion",
+                    items: [
+                      "JARAKED (Jafurah)",
+                      "South GHAWAR",
+                      "NORTH ARABIA",
+                    ],
                   ),
-                  RequestTextField(
+                  const RequestTextField(
                     title: "Eng. Program Letter No. *",
                     hintText: "i.e JRAK00323",
                   ),
                 ],
               ),
-              SizedBox(height: 20),
-              Row(
+              const SizedBox(height: 20),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   RequestTextField(
@@ -48,23 +64,33 @@ class RequestDetails extends StatelessWidget {
                     title: "GPS Longitude *",
                     hintText: "i.e 3456231.45",
                   ),
-                  RequestTextField(
+                  ServiceCompanyDropDown(
                     title: "Service Company *",
-                    hintText: "i.e SLB",
+                    items: [
+                      "Service Company 1",
+                      "Service Company 2",
+                      "Service Company 3",
+                      "Service Company 4",
+                    ],
                   ),
                 ],
               ),
-              SizedBox(height: 20),
-              Row(
+              const SizedBox(height: 20),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   RequestTextField(
                     title: "BackUp *",
                     hintText: "i.e 10 %",
                   ),
-                  RequestTextField(
+                  WBSDropDown(
                     title: "WBS *",
-                    hintText: "i.e 87-23410-2343",
+                    items: [
+                      "WBS Value 1",
+                      "WBS Value 2",
+                      "WBS Value 3",
+                      "WBS Value 4",
+                    ],
                   ),
                   SizedBox(height: 64, width: 270),
                 ],

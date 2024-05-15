@@ -1,5 +1,4 @@
 import 'package:explosive_app/ui/constants/constants.dart';
-import 'package:explosive_app/ui/screens/splash/horizontal_line.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 

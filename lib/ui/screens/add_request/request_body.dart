@@ -1,8 +1,7 @@
 import 'package:explosive_app/ui/constants/constants.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
-import 'request_details.dart';
+import 'add_request.dart';
 import 'package:flutter/material.dart';
-import 'request_items.dart';
 
 class RequestBody extends StatelessWidget {
   const RequestBody({super.key});

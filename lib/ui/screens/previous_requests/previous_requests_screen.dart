@@ -10,7 +10,7 @@ class PreviousRequestsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(title: "Profile", isDrawer: true),
+      appBar: CustomAppBar(title: "Requests", isDrawer: true),
       backgroundColor: AppColors.grey03,
       drawer: AppNavDrawer(),
       body: Center(

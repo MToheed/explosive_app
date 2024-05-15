@@ -1,5 +1,8 @@
+import 'dart:ffi';
+
 import 'package:explosive_app/ui/constants/constants.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -57,8 +60,8 @@ class ProfileCard extends StatelessWidget {
                       children: [
                         ProfileData(title: "User Type", body: "Foreman"),
                         ProfileData(title: "Site No.", body: "502"),
-                        ProfileData(title: "Service Company", body: "SLB"),
                         ProfileData(title: "Contact No.", body: "0581 587 864"),
+                        ProfileData(title: "", body: ""),
                       ],
                     ),
                   ),
