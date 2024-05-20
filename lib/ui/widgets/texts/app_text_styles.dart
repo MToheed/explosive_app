@@ -68,7 +68,6 @@ class AppTextStyles {
     fontSize: 32,
   );
 
-
   static const TextStyle bold24 = TextStyle(
     fontFamily: 'ManifaPro2',
     fontWeight: FontWeight.bold,
@@ -196,5 +195,11 @@ class AppTextStyles {
     );
   }
 
-
+  static TextStyle regular(double kFontSize, Color kColor) {
+    return TextStyle(
+      fontFamily: 'ManifaPro2',
+      fontSize: kFontSize,
+      color: kColor,
+    );
+  }
 }

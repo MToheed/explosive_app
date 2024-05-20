@@ -1,4 +1,5 @@
 import 'package:explosive_app/ui/constants/constants.dart';
+import '../../screens/all_requests/calendar/date_search_calendar.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -36,11 +37,7 @@ class SearchDateCard extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 25.0),
                     child: SearchTextField(),
                   ),
-                  AppDateCalendar(
-                    kHeight: 60,
-                    kWidth: 220,
-                    kFirstDate: DateTime(2000),
-                  ),
+                  const DateSearchCalendar(),
                   Expanded(
                     child: Align(
                       alignment: Alignment.centerRight,

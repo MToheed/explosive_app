@@ -2,11 +2,10 @@ import 'package:explosive_app/business/business.dart';
 import 'package:explosive_app/ui/constants/constants.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 class ServiceCompanyDropDown extends StatelessWidget {
-  const ServiceCompanyDropDown(
-      {super.key, required this.title, required this.items});
+  const ServiceCompanyDropDown({super.key, required this.title, required this.items});
 
   final String title;
   final List<String> items;
@@ -30,32 +29,31 @@ class ServiceCompanyDropDown extends StatelessWidget {
           ),
           child: Align(
             alignment: Alignment.centerLeft,
-            child: BlocBuilder<ServiceCompanyCubit, String>(
-              builder: (context, state) {
+            child: Consumer<AddRequestProvider>(
+              builder: (_, provider, __) {
                 return DropdownButton(
-                    value: state,
-                    underline: Container(),
-                    items: items
-                        .map<DropdownMenuItem<String>>(
-                          (String e) => DropdownMenuItem<String>(
-                            value: e,
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15.0),
-                              child: Text(
-                                e,
-                                style: AppTextStyles.semiBold(
-                                    24, AppColors.dark03),
-                              ),
-                            ),
-                          ),
-                        )
-                        .toList(),
-                    onChanged: (String? newValue) {
-                      return context
-                          .read<ServiceCompanyCubit>()
-                          .selectValue(newValue!);
-                    });
+                  value: provider.selectedServiceCompany,
+                  underline: Container(),
+                  items: items
+                      .map<DropdownMenuItem<String>>(
+                        (String e) => DropdownMenuItem<String>(
+                      value: e,
+                      child: Padding(
+                        padding:
+                        const EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Text(
+                          e,
+                          style:
+                          AppTextStyles.semiBold(24, AppColors.dark03),
+                        ),
+                      ),
+                    ),
+                  )
+                      .toList(),
+                  onChanged: (String? newValue) {
+                    return provider.setServiceCompany(newValue!);
+                  },
+                );
               },
             ),
           ),

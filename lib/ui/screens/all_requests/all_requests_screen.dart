@@ -2,10 +2,10 @@ import 'package:explosive_app/ui/constants/constants.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-import 'previous_requests_view.dart';
+import 'all_requests_view.dart';
 
-class PreviousRequestsScreen extends StatelessWidget {
-  const PreviousRequestsScreen({super.key});
+class AllRequestsScreen extends StatelessWidget {
+  const AllRequestsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class PreviousRequestsScreen extends StatelessWidget {
               SizedBox(height: 35),
               SearchDateCard(),
               Expanded(
-                child: PreviousRequestsView(),
+                child: AllRequestsView(),
               ),
             ],
           ),

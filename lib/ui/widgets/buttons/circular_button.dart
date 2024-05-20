@@ -26,7 +26,7 @@ class CircularButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: kColor,
         ),

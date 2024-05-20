@@ -4,7 +4,12 @@ import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class RequestDetails extends StatelessWidget {
-  const RequestDetails({super.key});
+  RequestDetails({super.key});
+
+  final programLetterController = TextEditingController();
+  final gpsLatitudeController = TextEditingController();
+  final gpsLongitudeController = TextEditingController();
+  final backUpController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +36,7 @@ class RequestDetails extends StatelessWidget {
                         style: AppTextStyles.bold(24, AppColors.dark02),
                       ),
                       const SizedBox(height: 10),
-                      AppDateCalendar(
-                        kHeight: 64,
-                        kWidth: 270,
-                        kFirstDate: DateTime.now(),
-                      ),
+                      const RequiredDateCalendar(),
                     ],
                   ),
                   const RequestFromDropDown(
@@ -46,25 +47,28 @@ class RequestDetails extends StatelessWidget {
                       "NORTH ARABIA",
                     ],
                   ),
-                  const RequestTextField(
+                  RequestTextField(
                     title: "Eng. Program Letter No. *",
                     hintText: "i.e JRAK00323",
+                    controller: programLetterController,
                   ),
                 ],
               ),
               const SizedBox(height: 20),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   RequestTextField(
                     title: "GPS Latitude *",
                     hintText: "i.e 2823237.72",
+                    controller: gpsLatitudeController,
                   ),
                   RequestTextField(
                     title: "GPS Longitude *",
                     hintText: "i.e 3456231.45",
+                    controller: gpsLongitudeController,
                   ),
-                  ServiceCompanyDropDown(
+                  const ServiceCompanyDropDown(
                     title: "Service Company *",
                     items: [
                       "Service Company 1",
@@ -76,14 +80,15 @@ class RequestDetails extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   RequestTextField(
                     title: "BackUp *",
                     hintText: "i.e 10 %",
+                    controller: backUpController,
                   ),
-                  WBSDropDown(
+                  const WBSDropDown(
                     title: "WBS *",
                     items: [
                       "WBS Value 1",
@@ -92,7 +97,7 @@ class RequestDetails extends StatelessWidget {
                       "WBS Value 4",
                     ],
                   ),
-                  SizedBox(height: 64, width: 270),
+                  const SizedBox(height: 64, width: 270),
                 ],
               ),
             ],

@@ -2,7 +2,7 @@ import 'package:explosive_app/business/business.dart';
 import 'package:explosive_app/ui/constants/constants.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 class GunTypeDropDown extends StatelessWidget {
   const GunTypeDropDown({super.key, required this.title, required this.items});
@@ -29,32 +29,31 @@ class GunTypeDropDown extends StatelessWidget {
           ),
           child: Align(
             alignment: Alignment.centerLeft,
-            child: BlocBuilder<GunTypeCubit, String>(
-              builder: (context, state) {
+            child: Consumer<AddRequestProvider>(
+              builder: (_, provider, __) {
                 return DropdownButton(
-                    value: state,
-                    underline: Container(),
-                    items: items
-                        .map<DropdownMenuItem<String>>(
-                          (String e) => DropdownMenuItem<String>(
-                            value: e,
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15.0),
-                              child: Text(
-                                e,
-                                style: AppTextStyles.semiBold(
-                                    24, AppColors.dark03),
-                              ),
+                  value: provider.selectedGunType,
+                  underline: Container(),
+                  items: items
+                      .map<DropdownMenuItem<String>>(
+                        (String e) => DropdownMenuItem<String>(
+                          value: e,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 15.0),
+                            child: Text(
+                              e,
+                              style:
+                                  AppTextStyles.semiBold(24, AppColors.dark03),
                             ),
                           ),
-                        )
-                        .toList(),
-                    onChanged: (String? newValue) {
-                      return context
-                          .read<GunTypeCubit>()
-                          .selectValue(newValue!);
-                    });
+                        ),
+                      )
+                      .toList(),
+                  onChanged: (String? newValue) {
+                    return provider.setGunType(newValue!);
+                  },
+                );
               },
             ),
           ),

@@ -2,8 +2,8 @@ import 'package:explosive_app/ui/constants/app_colors.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class PreviousRequestsView extends StatelessWidget {
-  const PreviousRequestsView({super.key});
+class AllRequestsView extends StatelessWidget {
+  const AllRequestsView({super.key});
 
   @override
   Widget build(BuildContext context) {

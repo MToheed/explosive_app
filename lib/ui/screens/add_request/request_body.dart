@@ -13,17 +13,9 @@ class RequestBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const RequestDetails(),
-          const RequestItems(),
-          const SizedBox(height: 25),
-          Align(
-            alignment: Alignment.center,
-            child: CircularButton(
-              title: "ADD",
-              onPressed: () {},
-            ),
-          ),
-          const ItemsTable(),
+          RequestDetails(),
+          RequestItems(),
+          const AddRequestTable(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20.0),
             child: Row(

@@ -1,4 +1,5 @@
 import 'package:explosive_app/ui/constants/constants.dart';
+import 'package:explosive_app/ui/widgets/texts/text_form_field_error.dart';
 import 'package:explosive_app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -7,10 +8,12 @@ class RequestTextField extends StatelessWidget {
     super.key,
     required this.title,
     required this.hintText,
+    required this.controller,
   });
 
   final String title;
   final String hintText;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +29,7 @@ class RequestTextField extends StatelessWidget {
           height: 64,
           width: 270,
           child: TextFormField(
+            controller: controller,
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderSide: const BorderSide(color: AppColors.dark03),
@@ -40,6 +44,10 @@ class RequestTextField extends StatelessWidget {
               contentPadding: const EdgeInsets.all(15),
             ),
           ),
+        ),
+        Text(
+          "Min 3 characters required *",
+          style: AppTextStyles.regular(15, AppColors.red),
         ),
       ],
     );

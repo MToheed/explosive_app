@@ -111,7 +111,7 @@ class SupportCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const AppSvgPicture(path: "assets/icons/phone_01.svg"),
+                    const AppSvgPicture(path: "assets/icons/phone_1.svg"),
                     const SizedBox(width: 30),
                     Text(
                       "Office",
